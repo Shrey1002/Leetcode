@@ -1,10 +1,10 @@
-class Solution(object):
-    sum = 0
-    def fib(self, n):
-        if n==1:
-            return 1
-        elif n==0:
-            return 0
-        else:
-            return self.fib(n-1) + self.fib(n-2)
-        
+class Solution:
+    def fib(self, n: int) -> int:
+        sum = 0
+        def test(n):
+            if n == 0:
+                return 0
+            if n == 1:
+                return 1
+            return test(n-1) + test(n-2)
+        return test(n)
